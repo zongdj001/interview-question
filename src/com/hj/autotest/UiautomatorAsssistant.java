@@ -76,6 +76,8 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 			e.printStackTrace();
 		}
 		return true;
+		
+		
 	}
 	public  void TakeScreen(UiDevice device,String descrip){
 		//获取当前时间
