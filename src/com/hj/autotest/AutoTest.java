@@ -6,6 +6,8 @@ public class AutoTest extends UiAutomatorTestCase {
 
 	/**
 	 * @param args
+	 
+	 我在服务器修改
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
