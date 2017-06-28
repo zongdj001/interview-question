@@ -20,7 +20,9 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 	 * @param args
 	 */
 	/*Uidevice对象
-	 * ceshi push
+	 
+	 * 
+	 * zhenzhen.zong
 	 * 
 	 * 
 	 * */
