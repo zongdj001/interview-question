@@ -19,7 +19,11 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 	/**
 	 * @param args
 	 */
-	/*Uidevice对象*/
+	/*Uidevice对象
+	 * ceshi push
+	 * 
+	 * 
+	 * */
 	UiDevice device;
 	
 	/* log 存放地址*/
@@ -76,6 +80,7 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 			e.printStackTrace();
 		}
 		return true;
+		
 		
 		
 	}
