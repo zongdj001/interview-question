@@ -14,7 +14,6 @@ public class QuanShi extends UiAutomatorTestCase{
 	String size;
 	long starttime;
 	long endtime;
-	
 	public void testDemo() throws UiObjectNotFoundException, IOException, RemoteException{
 		
 //			//启动app
@@ -30,6 +29,28 @@ public class QuanShi extends UiAutomatorTestCase{
 			logoObject.click();
 			UiObject selectEnvObject= new UiObject(new UiSelector().className("android.widget.RadioButton").index(5));
 			selectEnvObject.click();
+=======
+	UiautomatorAsssistant uiautomatorAsssistant ;
+	public void testDemo() throws UiObjectNotFoundException, IOException, RemoteException{
+		    uiautomatorAsssistant = new UiautomatorAsssistant(getUiDevice());
+//			//启动app
+//			getUiDevice().wakeUp();
+//			getUiDevice().swipe(100, 1178, 700, 1178, 50);
+//			sleep(5000);
+//			Runtime.getRuntime().exec("am start -S -n com.gnet.onemeeting/.LaunchActivity");
+			Runtime.getRuntime().exec("am start -S com.gnet.onemeeting/com.gnet.onemeeting.LaunchActivity");
+			//com.gnet.onemeeting/.login.LoginActivity
+			sleep(5000);
+			//环境设置，点击logo
+			//UiObject logoObject= new UiObject(new UiSelector().resourceId("com.gnet.onemeeting:id/iv_default_logo"));
+			//logoObject.click();
+		
+			uiautomatorAsssistant.ClickById("com.gnet.onemeeting:id/iv_default_logo");
+			//选择环境
+//			UiObject selectEnvObject= new UiObject(new UiSelector().className("android.widget.RadioButton").index(5));
+//			selectEnvObject.click();
+			uiautomatorAsssistant.ClickByClassName("android.widget.RadioButton");
+>>>>>>> branch 'master' of https://github.com/zhenzhen15/Sample_Uia.git
 			UiObject saveBtnObject=new UiObject(new UiSelector().className("android.widget.Button").text("确定"));
 			saveBtnObject.click();
 			//getUiDevice().sleep();
