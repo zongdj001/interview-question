@@ -1,6 +1,4 @@
 package com.hj.autotest;
-
-<<<<<<< HEAD
 import com.android.uiautomator.core.UiDevice;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
@@ -166,7 +164,5 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 				e.printStackTrace();
 			}
 		}
-		
->>>>>>> branch 'master' of https://github.com/zhenzhen15/Sample_Uia.git
 	}
 }
