@@ -7,10 +7,7 @@ public class AutoTest extends UiAutomatorTestCase {
 	/**
 	 * @param args
 	 * 
-	 * 6878798
 	 * 
-	 * 78900回家来了----1.9.2----我来啦
-	 * 这是本地修改 我在服务器修改
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
