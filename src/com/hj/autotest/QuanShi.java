@@ -33,7 +33,7 @@ public class QuanShi extends UiAutomatorTestCase{
 			//选择环境
 //			UiObject selectEnvObject= new UiObject(new UiSelector().className("android.widget.RadioButton").index(5));
 //			selectEnvObject.click();
-			uiautomatorAsssistant.ClickByClassName("android.widget.RadioButton");
+			uiautomatorAsssistant.ClickByClassName("android.widget.RadioButton",5);
 			UiObject saveBtnObject=new UiObject(new UiSelector().className("android.widget.Button").text("确定"));
 			saveBtnObject.click();
 			//getUiDevice().sleep();

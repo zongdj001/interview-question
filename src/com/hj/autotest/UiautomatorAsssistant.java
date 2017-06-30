@@ -49,15 +49,17 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 	public boolean ClickByText(String text){
 		return ClickInfo(CLICK_TEXT, text);
 	}
-	public boolean ClickByClassName(String classname) {
-		return ClickInfo(CLICK_CLASS, classname);		
+	public boolean ClickByClassName(String classname,int i) {
+		return ClickInfo(CLICK_CLASS, classname,i);		
 	}
-	public boolean ClickInfo( int CLICK ,String str){
+	
+	
+	public boolean ClickInfo( int CLICK ,String str,int ...args){
 		UiSelector uislector = null;
 		switch(CLICK){
 		case CLICK_ID : uislector = new UiSelector().resourceId(str);break;
 		case CLICK_TEXT: uislector = new UiSelector().text(str); break;
-		case CLICK_CLASS: uislector = new UiSelector().className(str);break;
+		case CLICK_CLASS: uislector = new UiSelector().className(str).index(args[0]);break;
 		default : return false;
 		
 		}
