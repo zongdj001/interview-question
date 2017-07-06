@@ -1,53 +1,12 @@
 package com.hj.autotest;
-import com.android.uiautomator.core.UiDevice;
-import com.android.uiautomator.core.UiObject;
-import com.android.uiautomator.core.UiObjectNotFoundException;
-import com.android.uiautomator.core.UiSelector;
-import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
-public class UiautomatorAsssistant extends UiAutomatorTestCase {
-
-	/**
-	 * @param args
-	 */
-	UiDevice device;
-	/* log 存放地址*/
-	final int  CLICK_ID = 10;
-	final int  CLICK_TEXT = 20;
-	
-	public boolean ClickById(String id){
-		return ClickInfo(CLICK_ID,id) ;
-	}
-	public boolean ClickInfo( int CLICK ,String str){
-		UiSelector uislector = null;
-		switch(CLICK){
-		case CLICK_ID : uislector = new UiSelector().resourceId(str);break;
-		case CLICK_TEXT: uislector = new UiSelector().text(str); break;
-		default : return false;
-		
-		}
-		
-		UiObject uiobject = new UiObject(uislector);
-		if(!uiobject.exists()){
-			return false;
-			
-		}
-		try {
-			uiobject.click();
-		} catch (UiObjectNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return true;
-=======
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Calendar;
 
-import android.R.integer;
+//import android.R.integer;
 
-import com.android.ddmlib.IDevice.DeviceState;
 import com.android.uiautomator.core.UiDevice;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
@@ -69,7 +28,7 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 	UiDevice device;
 	
 	/* log 存放地址*/
-	public String logpath = "/mnt/sdcard/performancellog.txt";
+	public String logpath = "/sdcard/quanshi/log/performancellog.txt";
 	
 	/*定义通过哪种方式获得uiselector的int标识*/
 	final int  CLICK_ID = 10;
@@ -77,7 +36,7 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 	final int  CLICK_CLASS = 30;
 	
 	
-	 UiautomatorAsssistant(UiDevice device) {
+	  UiautomatorAsssistant(UiDevice device) {
 		 
 		device = device;
 	}
@@ -135,7 +94,7 @@ public class UiautomatorAsssistant extends UiAutomatorTestCase {
 		String dateStr = calendar.get(Calendar.HOUR_OF_DAY)+"-"+calendar.get(calendar.MINUTE)+"-"+calendar.get(calendar.SECOND);
 		
 		//保存文件
-		File files = new File("/mnt/sdcard/"+dateStr+"_"+descrip+".jpg");
+		File files = new File("/sdcard/log/"+dateStr+"_"+descrip+".jpg");
 		UiAutomationLog("TakeScreen:"+dateStr+"_"+descrip+".jpg");
 		device.takeScreenshot(files);
 		

@@ -176,8 +176,9 @@ public class UiAutomatorTool {
                 bfw.write(line);
                 bfw.newLine();
                 bfw.flush();
-                bfw.close();
+                
             }
+            bfw.close();
             // 执行失败返回流
             InputStream errorInput = p.getErrorStream();
             BufferedReader errorReader = new BufferedReader(

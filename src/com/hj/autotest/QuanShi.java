@@ -9,13 +9,15 @@ import com.android.uiautomator.core.UiObjectNotFoundException;
 import com.android.uiautomator.core.UiScrollable;
 import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
+import com.hj.autotest.UiautomatorAsssistant;
+
 
 public class QuanShi extends UiAutomatorTestCase{
 	String size;
 	long starttime;
 	long endtime;
 	public void testDemo() throws UiObjectNotFoundException, IOException, RemoteException{
-		    uiautomatorAsssistant = new UiautomatorAsssistant(getUiDevice());
+		    UiautomatorAsssistant uiautomatorAsssistant = new UiautomatorAsssistant(getUiDevice());
 //			//启动app
 //			getUiDevice().wakeUp();
 //			getUiDevice().swipe(100, 1178, 700, 1178, 50);
