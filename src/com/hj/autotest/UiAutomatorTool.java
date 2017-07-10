@@ -186,6 +186,10 @@ public class UiAutomatorTool {
             String eline;
             while ((eline = errorReader.readLine()) != null) {
                 System.out.println(eline);
+                bfw.write(eline);
+                bfw.newLine();
+                bfw.flush();
+                bfw.close();
             }
         } catch (IOException e) {
             e.printStackTrace();
